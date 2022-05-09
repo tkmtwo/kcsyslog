@@ -164,3 +164,20 @@ docker-compose up
 
 ## Send Some Lines
 
+
+You can send with devices in Linux:
+
+
+````
+
+echo "<34>May 9 01:01:01 somehost Some message alpha" >> /dev/udp/127.0.0.1/514
+
+````
+
+
+You can send with nc on a number of OSes:
+
+````
+echo "<34> $DT yyymymachine.example.com su - ID47 - Test message $i" | nc -u -v -w 1 localhost 514
+
+````
